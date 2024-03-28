@@ -6,8 +6,8 @@ const Pwamodal = ({show, onClose, onInstall}: any) => {
   const blurBackground = show ? "background-blu" : "";
   return (
     show &&(
-      <div className=" fixed bottom-0 flex items-center justify-center z-50">
-          <div className="bg-white w-94 p-4 roundend-lg shadow-lg">
+      <div className=" fixed bottom-5 px-5 flex items-center justify-center z-50">
+          <div className="bg-white  rounded-xl w-94 p-4 roundend-lg shadow-lg">
               <h2 className="text-lg font-semibold mb-2 text-black"> Installa App</h2>
               <p className="text-sm mb-4 text-black">Clicca installa per salvare questa applicazione sul tuo cellulare.</p>
               <div className="flex">
