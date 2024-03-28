@@ -13,6 +13,7 @@ export default function Home() {
   useEffect(()=>{
 
     const handleBeforeInstallPrompt = (event: any) => {
+      
       event.preventDefault();
       setPrompt(event);
 
@@ -28,11 +29,14 @@ export default function Home() {
 
     }
   }, []);
+
+
   const handleCloseModal = () => {
     setShowInstallModal(false);
   };
 
   const handleInstallClick = () =>{
+    
     if(prompt){
       prompt.prompt();
       prompt.userChoice.then((choiceResult: any) =>{

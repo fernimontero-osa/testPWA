@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-export default function Pwamodal({show, onClose, onInstall}: any) {
+const Pwamodal = ({show, onClose, onInstall}: any) => {
 
   const blurBackground = show ? "background-blu" : "";
   return (
@@ -21,3 +21,5 @@ export default function Pwamodal({show, onClose, onInstall}: any) {
     )
   )
 }
+
+export default Pwamodal;
