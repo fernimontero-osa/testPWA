@@ -6,7 +6,7 @@ import Pwamodal from "./UI/Pwamodal";
 
 export default function Home() {
 
-  const [showInstallModal, setShowInstallModal] = useState<Boolean>(false);
+  const [showInstallModal, setShowInstallModal] = useState<Boolean>(true);
   const [prompt, setPrompt] = useState<any>(null);
 
 
@@ -17,8 +17,8 @@ export default function Home() {
       event.preventDefault();
       setPrompt(event);
 
-      if(!window.matchMedia("(display-mode: standalone)").matches){
-        setShowInstallModal(true);
+      if(window.matchMedia('(display-mode: standalone)').matches){
+        setShowInstallModal(false);
       }
     };
 
@@ -36,7 +36,7 @@ export default function Home() {
   };
 
   const handleInstallClick = () =>{
-    
+    // alert("OKAY");
     if(prompt){
       prompt.prompt();
       prompt.userChoice.then((choiceResult: any) =>{
